@@ -1,0 +1,65 @@
+@import "../../styles/variable.scss";
+.navigation__warpper {
+	position: absolute;
+	bottom: -3rem;
+	left: -3rem;
+	display: inline-flex;
+	.navigation__menu {
+		width: 10rem;
+		height: 10rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		.navigation__item {
+			list-style: none;
+			position: absolute;
+			transform-origin: 5rem;
+			left: 0;
+			transition: 0.5s;
+			transform: rotate(0deg) translateX(4rem);
+			cursor: pointer;
+			.navigation__link {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 2.2rem;
+				height: 2.2rem;
+				background-color: var(--navigation-toggle-background);
+				color: var(--navigation-toggle-color);
+				border-radius: 50%;
+				path {
+					stroke: var(--navigation-toggle-color);
+				}
+			}
+		}
+		.navigation__toggle {
+			z-index: 99999;
+			border-radius: 50%;
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 2.6rem;
+			height: 2.6rem;
+			background-color: var(--navigation-toggle-background);
+			font-size: 1.6rem;
+			cursor: pointer;
+			transition: transform 1.25s;
+			.navigation__toggle__icon {
+				path {
+					stroke: var(--navigation-toggle-color);
+				}
+			}
+		}
+	}
+	&.active {
+		bottom: 1rem;
+		left: 1rem;
+		.navigation__menu {
+			.navigation__toggle {
+				transform: rotate(315deg);
+			}
+		}
+	}
+}

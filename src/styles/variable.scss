@@ -1,0 +1,52 @@
+:root {
+	--navigation-toggle-background: #000;
+	--navigation-toggle-color: #fff;
+}
+
+$mobile-only: "screen and (max-width: 480px)";
+$tablet: "screen and (min-width: 641px)";
+$lap: "screen and (min-width: 1008px)";
+$desk: "screen and (min-width: 1024px)";
+$widescreen: "screen and (min-width: 1240px)";
+$xl: "screen and (min-width: 1440px)";
+$xxl: "screen and (min-width: 1536px)";
+
+@mixin mq($alias) {
+	@if $alias == "tablet" {
+		@media #{$tablet} {
+			@content;
+		}
+	} @else if $alias == "lap" {
+		@media #{$lap} {
+			@content;
+		}
+	} @else if $alias == "desk" {
+		@media #{$desk} {
+			@content;
+		}
+	} @else if $alias == "widescreen" {
+		@media #{$widescreen} {
+			@content;
+		}
+	} @else if $alias == "mobile-only" {
+		@media #{$mobile-only} {
+			@content;
+		}
+	} @else if $alias == "xl" {
+		@media #{$xl} {
+			@content;
+		}
+	} @else if $alias == "xxl" {
+		@media #{$xxl} {
+			@content;
+		}
+	}
+}
+// Ex:
+// @include mq("tablet") {
+//   font-size: 62.5%;
+// }
+
+/* NOTE:  @deprecated in the future
+  use @extend .custom-scrollbar; instead
+*/

@@ -1,0 +1,12 @@
+@import "./variable.scss";
+
+html {
+	scroll-behavior: smooth;
+	/* default font-size: 16px -> 62.5% * 16px = 10px */
+	/* => 1rem = 8px*/
+	font-size: 50% !important;
+	@include mq("tablet") {
+		/* => 1rem = 10px*/
+		font-size: 62.5% !important;
+	}
+}
