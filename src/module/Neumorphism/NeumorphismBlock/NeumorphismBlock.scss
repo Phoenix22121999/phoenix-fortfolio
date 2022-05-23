@@ -1,0 +1,100 @@
+.neu-block__warpper {
+	padding: 0.4rem;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	align-items: center;
+	.neu-block__leave {
+		height: 10rem;
+		width: 12rem;
+		border-radius: 40% 60% 40% 60% / 0% 100% 0% 100%;
+		box-shadow: var(--neumorphism-shadow-outset);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		transition: border-radius 0.5s;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			height: 80%;
+			width: 80%;
+			border-radius: 40% 60% 40% 60% / 0% 100% 0% 100%;
+			box-shadow: var(--neumorphism-shadow-inset);
+			transition: border-radius 0.5s;
+		}
+	}
+	.neu-block__crescent {
+		height: 12rem;
+		width: 12rem;
+		border-radius: 100%;
+		box-shadow: var(--neumorphism-shadow-outset);
+		position: relative;
+		overflow: unset;
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 15%;
+			left: 15%;
+			width: 90%;
+			height: 90%;
+			border-radius: 100%;
+			box-shadow: var(--neumorphism-shadow-inset);
+			background-color: var(--neumorphism-background);
+			transition: 1s;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: calc(15% + 2rem);
+			z-index: 1;
+			left: calc(15% + 2rem);
+			width: 80%;
+			height: 80%;
+			border-radius: 100%;
+			background-color: var(--neumorphism-background);
+			box-shadow: none;
+			transition: 1s;
+		}
+	}
+	.neu-block__round {
+		height: 12rem;
+		width: 12rem;
+		border-radius: 100%;
+		box-shadow: var(--neumorphism-shadow-outset);
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			height: 80%;
+			width: 80%;
+			border-radius: 100%;
+			box-shadow: var(--neumorphism-shadow-inset);
+		}
+	}
+	.neu-block__square {
+		height: 12rem;
+		width: 12rem;
+		border-radius: var(--neumorphism-border-radius);
+		box-shadow: var(--neumorphism-shadow-outset);
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			height: 80%;
+			width: 80%;
+			border-radius: var(--neumorphism-border-radius);
+			box-shadow: var(--neumorphism-shadow-inset);
+		}
+	}
+}

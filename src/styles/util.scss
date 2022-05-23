@@ -1,0 +1,16 @@
+@import "./variable.scss";
+
+.u__title--large {
+	font-size: var(--font-size-title-large);
+	line-height: var(--line-height-title-large);
+}
+
+.u__text--medium {
+	font-size: var(--font-size-text-medium);
+	line-height: var(--line-height-title-medium);
+}
+
+.u__text--small {
+	font-size: var(--font-size-text-small);
+	line-height: var(--line-height-title-small);
+}

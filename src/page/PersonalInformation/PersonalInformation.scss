@@ -1,0 +1,59 @@
+@import "../../styles/variable.scss";
+.pi__warpper {
+	background-color: var(--neumorphism-background);
+	height: 100vh;
+	display: flex;
+	padding: 2.5rem;
+
+	.pi__warpper--inner {
+		width: 100%;
+		height: 100%;
+		padding: 2rem;
+		border-radius: var(--neumorphism-border-radius);
+		box-shadow: var(--neumorphism-text-shadow-inset);
+		display: flex;
+	}
+
+	.pi__section {
+		width: 50%;
+		height: 100%;
+		border-radius: var(--neumorphism-border-radius);
+		&.pi__section--left {
+			display: flex;
+			.pi__left {
+			}
+			.pi__right {
+				margin: 1rem;
+				padding: 2rem;
+				display: flex;
+				text-align: end;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-end;
+				transition: box-shadow 1s;
+				flex-grow: 1;
+				height: 100%;
+				.pi__loadder {
+					height: 50%;
+				}
+				.pi__typewriter {
+					height: 50%;
+					font-weight: bold;
+					color: #c7c7c7;
+					letter-spacing: -0.001em;
+					font-size: var(--font-size-text-small);
+				}
+			}
+		}
+		&.pi__section--right {
+			margin: 1rem;
+			padding: 1rem;
+			// box-shadow: var(--neumorphism-shadow);
+			// box-shadow: var(--neumorphism-shadow-outset);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+		}
+	}
+}

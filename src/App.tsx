@@ -13,21 +13,29 @@ import {
 function App() {
 	return (
 		<BrowserRouter>
-			<Routes>
-				<Route
-					path={ROUTE.PERSONAL_INFORMATION}
-					element={<PersonalInformation />}
-				></Route>
-				<Route
-					path={ROUTE.CONTACT_INFORMATION}
-					element={<ContactInformation />}
-				></Route>
-				<Route path={ROUTE.EDUCATIONS} element={<Educations />}></Route>
-				<Route path={ROUTE.KNOWLEDGE} element={<Knowledge />}></Route>
-				<Route path={ROUTE.PROJECT} element={<Project />}></Route>
-				<Route path={"/"} element={<PersonalInformation />}></Route>
-			</Routes>
-			<Navigation />
+			<section className="fortfolio__wrapper">
+				<Routes>
+					<Route
+						path={ROUTE.PERSONAL_INFORMATION}
+						element={<PersonalInformation />}
+					></Route>
+					<Route
+						path={ROUTE.CONTACT_INFORMATION}
+						element={<ContactInformation />}
+					></Route>
+					<Route
+						path={ROUTE.EDUCATIONS}
+						element={<Educations />}
+					></Route>
+					<Route
+						path={ROUTE.KNOWLEDGE}
+						element={<Knowledge />}
+					></Route>
+					<Route path={ROUTE.PROJECT} element={<Project />}></Route>
+					<Route path={"/"} element={<PersonalInformation />}></Route>
+				</Routes>
+				<Navigation />
+			</section>
 		</BrowserRouter>
 	);
 }

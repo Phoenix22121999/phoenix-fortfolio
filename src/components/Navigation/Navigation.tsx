@@ -23,7 +23,7 @@ export const NAVIGATION_ITEM: NavigationItem[] = [
 		path: ROUTE.CONTACT_INFORMATION,
 	},
 ];
-export const Navigation = React.memo(({}: NavigationProps) => {
+export const Navigation = React.memo((props: NavigationProps) => {
 	const [active, setActive] = useState<Boolean>(false);
 	const onClick = () => {
 		setActive(!active);

@@ -1,0 +1,42 @@
+@import "../../../styles/variable.scss";
+.neu-loader__warpper {
+	display: flex;
+	flex-direction: row-reverse;
+	.neu-loader__column {
+		position: relative;
+		width: 40px;
+		height: 200px;
+		margin: 20px;
+		overflow: hidden;
+		border-radius: 40px;
+		background: var(--neumorphism-background);
+		border: 2px solid #272727;
+		box-shadow: var(--neumorphism-shadow-deep);
+		.neu-loader__node {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background-color: #f9d923;
+			width: 100%;
+			animation: neu-loadder-animation 2.5s ease-in-out infinite;
+		}
+	}
+}
+
+@keyframes neu-loadder-animation {
+	0% {
+		height: 0%;
+		filter: hue-rotate(180deg);
+	}
+
+	50% {
+		height: 100%;
+		filter: hue-rotate(0deg);
+	}
+
+	100% {
+		height: 0%;
+		filter: hue-rotate(180deg);
+	}
+}

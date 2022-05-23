@@ -1,0 +1,49 @@
+.avatar__warpper {
+	overflow: unset;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	.avatar__warpper-inner {
+		position: relative;
+		width: 80%;
+		height: 80%;
+		overflow: unset;
+	}
+	.avatar__inner {
+		border-radius: var(--neumorphism-border-radius);
+		padding: 1.2rem;
+		box-shadow: var(--neumorphism-shadow-inset);
+		position: relative;
+		overflow: unset;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: var(--neumorphism-border-radius);
+		}
+		.avatar__wave {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+			height: 100%;
+			border-radius: var(--neumorphism-border-radius);
+			animation: wave 2.5s ease-in-out infinite;
+			// transform: scale3d(1.2, 1.2, 1);
+			box-shadow: var(--neumorphism-shadow-outset);
+		}
+	}
+}
+
+@keyframes wave {
+	0% {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale3d(1, 1, 1);
+	}
+	100% {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale3d(1.2, 1.2, 1);
+	}
+}

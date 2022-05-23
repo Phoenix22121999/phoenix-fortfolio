@@ -1,0 +1,39 @@
+.neu-loader-round__warrper {
+	background: var(--neumorphism-background);
+	.neu-loader-round__warrper--inner {
+		overflow: unset;
+		width: 20rem;
+		height: 20rem;
+		position: relative;
+		margin: 1rem;
+		padding: 1rem;
+		background: var(--neumorphism-background);
+		.neu-loader-round__ring {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 100%;
+			box-shadow: var(--neumorphism-shadow-deep);
+			animation: neu-loadder-round-animation ease-in-out infinite;
+			border: var(--neumorphism-background) 1rem solid;
+		}
+	}
+}
+@keyframes neu-loadder-round-animation {
+	0% {
+		background: var(--neumorphism-background);
+	}
+
+	60% {
+		background: var(--neumorphism-background);
+	}
+
+	95% {
+		background: #f9d923;
+	}
+
+	100% {
+		background: var(--neumorphism-background);
+	}
+}
