@@ -1,0 +1,213 @@
+@import "../../../../styles/variable.scss";
+.neu-home__warrper {
+	width: 100vw;
+	overflow: auto;
+	background-color: var(--neu-background);
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	@include mq("desk") {
+		flex-direction: row;
+		height: 100vh;
+	}
+	.neu-home__warrper--left {
+		@include centerRelative();
+		width: 90%;
+		height: 36rem;
+		@include mq("desk") {
+			width: 60%;
+			height: 100%;
+		}
+		overflow: unset;
+	}
+	.neu-home__warrper--right {
+		margin-top: 8rem;
+		width: 90%;
+		height: 125rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		@include mq("desk") {
+			flex-wrap: wrap;
+			width: 40%;
+			height: 100%;
+			// padding: 2rem;
+			margin-top: 0rem;
+			flex-direction: row;
+		}
+	}
+	.neu-home__text {
+		width: 90%;
+		height: 90%;
+		color: var(--neu-color);
+		font-weight: 500;
+		position: relative;
+		overflow: visible;
+		font-size: var(--font-size-text-small);
+		line-height: var(--line-height-text-small);
+		background-color: var(--neu-background);
+		box-shadow: var(--neu-shadow-inset);
+		padding: 2rem 2rem 6rem 2rem;
+		border-radius: 20px;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		@include mq("desk") {
+			width: 70%;
+			height: 60%;
+			padding: 4rem 4rem 4rem 14rem;
+		}
+		> .Typewriter {
+			width: 100%;
+			height: 60%;
+		}
+		.neu-home-square {
+			box-shadow: var(--neu-shadow-outset);
+			position: absolute;
+			top: 0rem;
+			left: 0rem;
+			width: 100%;
+			height: 100%;
+			background-color: var(--neu-background);
+			border-radius: 20px;
+			animation: neu-show-move-mobile 2s ease-in-out forwards;
+			animation-delay: 2s;
+			padding: 2rem;
+			display: flex;
+			justify-content: center;
+			align-self: center;
+			svg {
+				width: 100%;
+				height: 100%;
+				path {
+					fill: var(--neu-color);
+				}
+			}
+			@include mq("desk") {
+				animation: neu-show-move 2s ease-in-out forwards;
+			}
+		}
+	}
+	.neu-home__nav-card-warpper {
+		position: relative;
+		overflow: unset;
+		animation: neu-card-move 2s ease-in-out infinite;
+		cursor: pointer;
+		width: 90%;
+		margin: 1rem;
+		margin-bottom: 4rem;
+		padding: 1.4rem;
+		box-shadow: var(--neu-shadow);
+		border-radius: var(--neu-border-radius);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		@include mq("desk") {
+			padding: 1.4rem;
+			width: initial;
+		}
+		.neu-home__nav-card {
+			transform: translateY(-4rem);
+			background-color: var(--neu-second-color);
+			border-radius: 20px;
+			width: 100%;
+			height: 100%;
+			padding: 2rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			z-index: 1;
+			overflow: unset;
+			transition: transform 0.25s;
+			@include mq("desk") {
+				transform: translateY(0);
+				width: 12rem;
+				height: 16rem;
+				padding-bottom: 2rem;
+			}
+			.neu-home__nav-card-icon {
+				width: 25%;
+				height: 100%;
+				@include centerRelative();
+				@include mq("desk") {
+					width: 100%;
+					height: 50%;
+				}
+			}
+		}
+		.neu-home__nav-card-title {
+			border-radius: var(--neu-border-radius);
+			width: 75%;
+			height: 4rem;
+			position: absolute;
+			bottom: -1rem;
+			transform: translate(-50%, -50%);
+			left: 50%;
+			z-index: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: z-index 0.25s;
+			transition-delay: 0s;
+			font-size: 1.2rem;
+			// transition: bottom 0.5s, z-index 0s, transform 0.5s;
+			// transition-delay: 0.5s, 0.5s, 0s;
+			// color: var(--neu-color);
+			@include mq("desk") {
+				z-index: -1;
+			}
+		}
+		&:hover {
+			.neu-home__nav-card {
+				transform: translateY(-4rem);
+			}
+			.neu-home__nav-card-title {
+				z-index: 1;
+				transition-delay: 0s;
+				// @include mq("desk") {
+				// 	bottom: -20%;
+				// 	z-index: 11;
+				// 	transform: translate(-50%, -75%);
+				// }
+			}
+		}
+	}
+}
+
+@keyframes neu-show-move {
+	100% {
+		top: 50%;
+		left: 0rem;
+		width: 20rem;
+		height: 20rem;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@keyframes neu-show-move-mobile {
+	100% {
+		top: 100%;
+		left: 50%;
+		width: 50%;
+		height: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+// @keyframes neu-card-move {
+// 	0% {
+// 		transform: translateY(0);
+// 	}
+// 	50% {
+// 		transform: translateY(-1rem);
+// 	}
+// 	100% {
+// 		transform: translateY(0);
+// 	}
+// }

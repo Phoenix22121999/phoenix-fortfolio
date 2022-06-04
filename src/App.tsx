@@ -1,42 +1,21 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Navigation } from "./components/Navigation/Navigation";
-import { ROUTE } from "./contants/Route";
-import {
-	ContactInformation,
-	Educations,
-	Knowledge,
-	PersonalInformation,
-	Project,
-} from "./page";
+import { BrowserRouter } from "react-router-dom";
 
+import ThemeProvider from "./contexts/themeContext";
+import AnimatedRoutes from "./AnimationRoutes";
+import { Navigation } from "./components/Navigation/Navigation";
+import { ThemeSelector } from "./components/ThemeSelecter/ThemeSelector";
 function App() {
 	return (
-		<BrowserRouter>
+		<ThemeProvider>
 			<section className="fortfolio__wrapper">
-				<Routes>
-					<Route
-						path={ROUTE.PERSONAL_INFORMATION}
-						element={<PersonalInformation />}
-					></Route>
-					<Route
-						path={ROUTE.CONTACT_INFORMATION}
-						element={<ContactInformation />}
-					></Route>
-					<Route
-						path={ROUTE.EDUCATIONS}
-						element={<Educations />}
-					></Route>
-					<Route
-						path={ROUTE.KNOWLEDGE}
-						element={<Knowledge />}
-					></Route>
-					<Route path={ROUTE.PROJECT} element={<Project />}></Route>
-					<Route path={"/"} element={<PersonalInformation />}></Route>
-				</Routes>
-				<Navigation />
+				<BrowserRouter>
+					<AnimatedRoutes />
+					<Navigation />
+					<ThemeSelector />
+				</BrowserRouter>
 			</section>
-		</BrowserRouter>
+		</ThemeProvider>
 	);
 }
 

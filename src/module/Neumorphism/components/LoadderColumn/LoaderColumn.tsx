@@ -15,7 +15,7 @@ export const LoaderColumn = React.memo(
 			<div className="neu-loader__warpper">
 				{columnArray.map((item) => {
 					return (
-						<div className="neu-loader__column">
+						<div className="neu-loader__column" key={item}>
 							<div
 								className="neu-loader__node"
 								style={{ animationDelay: `${-0.5 * item}s` }}

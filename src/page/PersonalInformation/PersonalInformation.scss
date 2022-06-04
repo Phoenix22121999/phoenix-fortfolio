@@ -20,29 +20,29 @@
 		border-radius: var(--neumorphism-border-radius);
 		&.pi__section--left {
 			display: flex;
-			.pi__left {
+			justify-content: space-around;
+			align-items: center;
+		}
+		&.pi__section--center {
+			margin: 1rem;
+			padding: 2rem;
+			display: flex;
+			text-align: center;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+			transition: box-shadow 1s;
+			flex-grow: 1;
+			height: 100%;
+			.pi__loadder {
+				height: 50%;
 			}
-			.pi__right {
-				margin: 1rem;
-				padding: 2rem;
-				display: flex;
-				text-align: end;
-				flex-direction: column;
-				justify-content: center;
-				align-items: flex-end;
-				transition: box-shadow 1s;
-				flex-grow: 1;
-				height: 100%;
-				.pi__loadder {
-					height: 50%;
-				}
-				.pi__typewriter {
-					height: 50%;
-					font-weight: bold;
-					color: #c7c7c7;
-					letter-spacing: -0.001em;
-					font-size: var(--font-size-text-small);
-				}
+			.pi__typewriter {
+				height: 50%;
+				font-weight: bold;
+				color: #c7c7c7;
+				letter-spacing: -0.001em;
+				font-size: var(--font-size-text-small);
 			}
 		}
 		&.pi__section--right {

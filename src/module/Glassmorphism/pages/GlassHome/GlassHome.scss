@@ -1,0 +1,211 @@
+@import "../../../../styles/variable.scss";
+.glass-home__warrper {
+	width: 100vw;
+	overflow: auto;
+	background-image: var(--glass-bg-gradiant);
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	@include mq("desk") {
+		flex-direction: row;
+		height: 100vh;
+	}
+	.glass-home__warrper--left {
+		@include centerRelative();
+		width: 90%;
+		height: 36rem;
+		@include mq("desk") {
+			width: 60%;
+			height: 100%;
+		}
+		overflow: unset;
+	}
+	.glass-home__warrper--right {
+		margin-top: 8rem;
+		width: 90%;
+		height: 125rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		@include mq("desk") {
+			flex-wrap: wrap;
+			width: 40%;
+			height: 100%;
+			// padding: 2rem;
+			margin-top: 0rem;
+			flex-direction: row;
+		}
+	}
+	.glass-home__text {
+		width: 90%;
+		height: 90%;
+		color: var(--glass-color);
+		font-weight: 500;
+		position: relative;
+		overflow: visible;
+		font-size: var(--font-size-text-small);
+		line-height: var(--line-height-text-small);
+		background-color: var(--glass-bg-color);
+		padding: 2rem 2rem 6rem 2rem;
+		border-radius: 20px;
+		box-shadow: 0 5px 15px rgba($color: #000000, $alpha: 0.1);
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		@include mq("desk") {
+			width: 70%;
+			height: 60%;
+			padding: 4rem 4rem 4rem 14rem;
+		}
+		> .Typewriter {
+			width: 100%;
+			height: 60%;
+		}
+		.glass-home-square {
+			position: absolute;
+			top: 0rem;
+			left: 0rem;
+			width: 100%;
+			height: 100%;
+			background-color: var(--glass-bg-color);
+			backdrop-filter: var(--glass-blur);
+			border-radius: 20px;
+			animation: glass-show-move-mobile 2s ease-in-out forwards;
+			animation-delay: 2s;
+			padding: 2rem;
+			display: flex;
+			justify-content: center;
+			align-self: center;
+			svg {
+				width: 100%;
+				height: 100%;
+				path {
+					fill: var(--glass-color);
+				}
+			}
+			@include mq("desk") {
+				animation: glass-show-move 2s ease-in-out forwards;
+			}
+		}
+	}
+	.glass-home__nav-card-warpper {
+		position: relative;
+		overflow: unset;
+		animation: glass-card-move 2s ease-in-out infinite;
+		cursor: pointer;
+		width: 90%;
+		margin: 1rem;
+		padding-bottom: 4rem;
+		@include mq("desk") {
+			margin: 2.5rem;
+			width: initial;
+		}
+		.glass-home__nav-card {
+			background-color: var(--glass-bg-color);
+			backdrop-filter: blur(15px);
+			border-radius: 20px;
+			width: 100%;
+			height: 14rem;
+			padding: 2rem;
+			padding-bottom: 3rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			z-index: 10;
+			overflow: unset;
+			@include mq("desk") {
+				width: 12rem;
+				height: 16rem;
+				padding-bottom: 2rem;
+			}
+			.glass-home__nav-card-icon {
+				width: 25%;
+				height: 100%;
+				@include centerRelative();
+				@include mq("desk") {
+					width: 100%;
+					height: 50%;
+				}
+				svg {
+					width: 100%;
+					height: 100%;
+					color: var(--glass-color);
+					path {
+						stroke: var(--glass-color);
+					}
+				}
+			}
+		}
+		.glass-home__nav-card-title {
+			border-radius: 15px;
+			transform: translate(-50%, -50%);
+			width: 75%;
+			height: 4rem;
+			position: absolute;
+			bottom: 0.2rem;
+			left: 50%;
+			z-index: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: var(--glass-reverse-color);
+			font-size: 1.2rem;
+			transition: bottom 0.5s, z-index 0s, transform 0.5s;
+			transition-delay: 0.5s, 0.5s, 0s;
+			color: var(--glass-color);
+			// @include mq("desk") {
+			// 	bottom: -3.2rem;
+			// }
+		}
+		&:hover {
+			.glass-home__nav-card-title {
+				transition-delay: 0s, 0.5s, 0.5s;
+				bottom: -2rem;
+				z-index: 11;
+				transform: translate(-50%, -75%);
+				// @include mq("desk") {
+				// 	bottom: -20%;
+				// 	z-index: 11;
+				// 	transform: translate(-50%, -75%);
+				// }
+			}
+		}
+	}
+}
+
+@keyframes glass-show-move {
+	100% {
+		top: 50%;
+		left: 0rem;
+		width: 20rem;
+		height: 20rem;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@keyframes glass-show-move-mobile {
+	100% {
+		top: 100%;
+		left: 50%;
+		width: 50%;
+		height: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@keyframes glass-card-move {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-1rem);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}

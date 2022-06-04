@@ -5,6 +5,9 @@
 	justify-content: space-around;
 	flex-direction: column;
 	align-items: center;
+	&.neu-block__warpper--reverse {
+		flex-direction: column-reverse;
+	}
 	.neu-block__leave {
 		height: 10rem;
 		width: 12rem;
@@ -15,7 +18,7 @@
 		align-items: center;
 		position: relative;
 		transition: border-radius 0.5s;
-		&::after {
+		.neu-block__leave--inner {
 			content: "";
 			position: absolute;
 			top: 50%;
@@ -35,7 +38,7 @@
 		box-shadow: var(--neumorphism-shadow-outset);
 		position: relative;
 		overflow: unset;
-		&::after {
+		.neu-block__crescent--inset {
 			content: "";
 			position: absolute;
 			bottom: 15%;
@@ -47,7 +50,7 @@
 			background-color: var(--neumorphism-background);
 			transition: 1s;
 		}
-		&::before {
+		.neu-block__crescent--hide {
 			content: "";
 			position: absolute;
 			bottom: calc(15% + 2rem);
@@ -67,7 +70,7 @@
 		border-radius: 100%;
 		box-shadow: var(--neumorphism-shadow-outset);
 		position: relative;
-		&::after {
+		.neu-block__round--inner {
 			content: "";
 			position: absolute;
 			top: 50%;
@@ -85,7 +88,7 @@
 		border-radius: var(--neumorphism-border-radius);
 		box-shadow: var(--neumorphism-shadow-outset);
 		position: relative;
-		&::after {
+		.neu-block__square--inner {
 			content: "";
 			position: absolute;
 			top: 50%;

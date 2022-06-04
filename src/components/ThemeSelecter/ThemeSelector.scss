@@ -1,0 +1,132 @@
+@import "../../styles/variable.scss";
+.theme-selector__warpper {
+	position: absolute;
+	bottom: 0rem;
+	right: 0rem;
+	display: flex;
+	overflow: unset;
+	width: 5rem;
+	height: 5rem;
+	justify-content: center;
+	align-items: center;
+	transition: all 1s;
+	z-index: 99999;
+	@include mq("desk") {
+		width: 10rem;
+		height: 10rem;
+	}
+	.theme-selector__menu {
+		width: 5rem;
+		height: 5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		overflow: unset;
+		// background-color: red;
+		// border-radius: 100%;
+		transition: all 1s;
+		@include mq("desk") {
+			width: 10rem;
+			height: 10rem;
+		}
+		.theme-selector__item {
+			list-style: none;
+			position: absolute;
+			transform-origin: 20rem;
+			left: -17rem;
+			transition: transform 0.5s;
+			transform: rotate(0deg) translateX(18rem);
+			cursor: pointer;
+			overflow: unset;
+			align-items: center;
+			display: flex;
+			@include mq("desk") {
+				transform-origin: 30rem;
+				left: -25rem;
+				transform: rotate(0deg) translateX(28rem);
+			}
+			.theme-selector__link {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 2.2rem;
+				height: 2.2rem;
+				transition: all 1s;
+				background-color: var(--theme-selector-toggle-background);
+				color: var(--theme-selector-toggle-color);
+				border-radius: 50%;
+				path {
+					stroke: var(--theme-selector-toggle-color);
+				}
+			}
+		}
+		.theme-selector__toggle {
+			z-index: 99999;
+			border-radius: 50%;
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 4rem;
+			height: 4rem;
+			background-color: var(--theme-selector-toggle-background);
+			font-size: 1.6rem;
+			cursor: pointer;
+			transition: all 1.25s;
+			.theme-selector__toggle__icon {
+				path {
+					stroke: var(--theme-selector-toggle-color);
+				}
+			}
+		}
+	}
+
+	&.active {
+		background-color: rgba($color: #000, $alpha: 1);
+		width: 100%;
+		height: 100%;
+		bottom: 0rem;
+		right: 0rem;
+		&::after {
+			z-index: 1;
+			content: "";
+			background-image: url("../../assets/svgs/phoenix.svg");
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-position: center;
+			object-fit: contain;
+		}
+		.theme-selector__menu {
+			z-index: 2;
+			.theme-selector__toggle {
+				width: 5rem;
+				height: 5rem;
+				transform: rotate(315deg);
+				font-size: 3.6rem;
+				@include mq("desk") {
+					width: 10rem;
+					height: 10rem;
+				}
+			}
+			.theme-selector__item {
+				.theme-selector__link {
+					transition: all 0.75s;
+					transition-delay: 1s;
+					width: 5rem;
+					height: 5rem;
+					font-size: 3.6rem;
+					opacity: 1;
+					@include mq("desk") {
+						width: 10rem;
+						height: 10rem;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,5 +1,10 @@
 @import "./variable.scss";
 
+.u__text--main {
+	font-size: var(--font-size-text-main);
+	line-height: var(--line-height-text-main);
+}
+
 .u__title--large {
 	font-size: var(--font-size-title-large);
 	line-height: var(--line-height-title-large);
@@ -12,5 +17,10 @@
 
 .u__text--small {
 	font-size: var(--font-size-text-small);
-	line-height: var(--line-height-title-small);
+	line-height: var(--line-height-text-small);
+}
+
+.u__page {
+	overflow: auto;
+	height: 100vh;
 }

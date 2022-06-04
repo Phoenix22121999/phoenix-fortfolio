@@ -1,0 +1,64 @@
+:root {
+	.glass {
+		--glass-blur: blur(20px);
+		&.glass--dark {
+			--glass-bg-color: rgba(16 18 27 / 10%);
+			--glass-border-color: rgba(113 119 144 / 25%);
+			--glass-color: #f9fafb;
+			--glass-reverse-color: #3c3a3a;
+			--glass-inactive-color: rgb(113 119 144 / 78%);
+			--glass-body-font: "Poppins", sans-serif;
+			--glass-hover-menu-bg: rgba(12 15 25 / 30%);
+			--glass-content-title-color: #999ba5;
+			--glass-content-bg: rgb(146 151 179 / 13%);
+			--glass-button-inactive: rgb(249 250 251 / 55%);
+			--glass-dropdown-bg: #21242d;
+			--glass-dropdown-hover: rgb(42 46 60);
+			--glass-popup-bg: rgb(22 25 37);
+			--glass-search-bg: #14162b;
+			--glass-overlay-bg: rgba(36, 39, 59, 0.3);
+			--glass-scrollbar-bg: rgb(1 2 3 / 40%);
+			--glass-bg-gradiant: linear-gradient(
+				43deg,
+				#4158d0 0%,
+				#c850c0 46%,
+				#ffcc70 100%
+			);
+			--glass-bg-solid: rgba($color: #000, $alpha: 0.85);
+			--glass-title--color-0: #8c1c13;
+			--glass-title--color-1: #bf4342;
+			--glass-title--color-2: #69330d;
+			--glass-title--color-3: #79642b;
+			--glass-title--color-4: #2e4500;
+			--glass-title--color-5: #735751;
+		}
+		&.glass--light {
+			--glass-bg-color: rgb(255 255 255 / 10%);
+			--glass-color: #3c3a3a;
+			--glass-reverse-color: #f9fafb;
+			--glass-inactive-color: #333333;
+			--glass-button-inactive: #3c3a3a;
+			--glass-search-bg: rgb(255 255 255 / 31%);
+			--glass-dropdown-bg: #f7f7f7;
+			--glass-overlay-bg: rgb(255 255 255 / 30%);
+			--glass-dropdown-hover: rgb(236 236 236);
+			--glass-border-color: rgb(255 255 255 / 35%);
+			--glass-popup-bg: rgb(255 255 255);
+			--glass-hover-menu-bg: rgba(255 255 255 / 35%);
+			--glass-scrollbar-bg: rgb(255 253 253 / 57%);
+			--glass-content-title-color: --glass-color;
+			--glass-bg-gradiant: linear-gradient(
+				43deg,
+				#4158d0 0%,
+				#c850c0 46%,
+				#ffcc70 100%
+			);
+			--glass-title--color-0: #ffadad;
+			--glass-title--color-1: #ffd6a5;
+			--glass-title--color-2: #fdffb6;
+			--glass-title--color-3: #caffbf;
+			--glass-title--color-4: #9bf6ff;
+			--glass-title--color-5: #bdb2ff;
+		}
+	}
+}

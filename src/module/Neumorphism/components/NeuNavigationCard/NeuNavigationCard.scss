@@ -1,0 +1,89 @@
+@import "../../../../styles/variable.scss";
+.neu-home__nav-card-warpper {
+	svg {
+		width: 100%;
+		height: 100%;
+		color: var(--neu-color);
+		path {
+			stroke: var(--neu-color);
+		}
+	}
+}
+.neu-home__nav-card-warpper-0 {
+	color: var(--neu-title--color-0);
+	&:hover {
+		svg {
+			width: 100%;
+			height: 100%;
+			color: var(--neu-title--color-0);
+			path {
+				stroke: var(--neu-title--color-0);
+			}
+		}
+	}
+}
+.neu-home__nav-card-warpper-1 {
+	color: var(--neu-title--color-1);
+	&:hover {
+		svg {
+			width: 100%;
+			height: 100%;
+			color: var(--neu-title--color-1);
+			path {
+				stroke: var(--neu-title--color-1);
+			}
+		}
+	}
+}
+.neu-home__nav-card-warpper-2 {
+	color: var(--neu-title--color-2);
+	&:hover {
+		svg {
+			width: 100%;
+			height: 100%;
+			color: var(--neu-title--color-2);
+			path {
+				stroke: var(--neu-title--color-2);
+			}
+		}
+	}
+}
+.neu-home__nav-card-warpper-3 {
+	color: var(--neu-title--color-3);
+	&:hover {
+		svg {
+			width: 100%;
+			height: 100%;
+			color: var(--neu-title--color-3);
+			path {
+				stroke: var(--neu-title--color-3);
+			}
+		}
+	}
+}
+.neu-home__nav-card-warpper-4 {
+	color: var(--neu-title--color-4);
+	&:hover {
+		svg {
+			width: 100%;
+			height: 100%;
+			color: var(--neu-title--color-4);
+			path {
+				stroke: var(--neu-title--color-4);
+			}
+		}
+	}
+}
+.neu-home__nav-card-warpper-5 {
+	color: var(--neu-title--color-5);
+	&:hover {
+		svg {
+			width: 100%;
+			height: 100%;
+			color: var(--neu-title--color-5);
+			path {
+				stroke: var(--neu-title--color-5);
+			}
+		}
+	}
+}

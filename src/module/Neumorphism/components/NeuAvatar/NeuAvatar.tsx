@@ -1,6 +1,6 @@
 import React from "react";
 import "./NeuAvatar.scss";
-import avartar from "../../../assets/images/phoenix.jpg";
+import avartar from "../../../../assets/images/phoenix.jpg";
 type NeuAvatarProps = {};
 
 export const NeuAvatar = (props: NeuAvatarProps) => {

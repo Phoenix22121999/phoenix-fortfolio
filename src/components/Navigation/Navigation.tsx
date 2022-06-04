@@ -1,28 +1,13 @@
 import React, { useState } from "react";
 import "./Navigation.scss";
-import { NavigationItem } from "./../../types/types";
-import { GrAdd, GrBook, GrContactInfo, GrTechnology } from "react-icons/gr";
-import { AiOutlineProject, AiOutlineUser } from "react-icons/ai";
+
 import classNames from "classnames";
-import { ROUTE } from "../../contants/Route";
 import { Link } from "react-router-dom";
+import { NAVIGATION_ITEM } from "../../utils/NavArray";
+import { GrAdd } from "react-icons/gr";
 
 export type NavigationProps = {};
-export const NAVIGATION_ITEM: NavigationItem[] = [
-	{
-		label: "Personal Info",
-		icon: <AiOutlineUser />,
-		path: ROUTE.PERSONAL_INFORMATION,
-	},
-	{ label: "Knowledge", icon: <GrTechnology />, path: ROUTE.KNOWLEDGE },
-	{ label: "Educations", icon: <GrBook />, path: ROUTE.EDUCATIONS },
-	{ label: "Project", icon: <AiOutlineProject />, path: ROUTE.PROJECT },
-	{
-		label: "Contact Ingo",
-		icon: <GrContactInfo />,
-		path: ROUTE.CONTACT_INFORMATION,
-	},
-];
+
 export const Navigation = React.memo((props: NavigationProps) => {
 	const [active, setActive] = useState<Boolean>(false);
 	const onClick = () => {

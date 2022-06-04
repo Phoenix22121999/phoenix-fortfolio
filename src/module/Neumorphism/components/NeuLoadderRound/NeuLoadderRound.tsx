@@ -16,6 +16,7 @@ export const NeuLoadderRound = ({ roundNumber = 3 }: NeuLoadderRoundProps) => {
 				{roundArray.map((item) => {
 					return (
 						<div
+							key={item}
 							className={classNames(
 								"neu-loader-round__ring",
 								`neu-loader-round__ring--${item}`
